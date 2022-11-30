@@ -1,18 +1,8 @@
 from flask import request, jsonify
-from psycopg2 import connect, extras
+from psycopg2 import extras
 
 #parametros de la base de datos
-host = 'localhost'
-port = 5432
-dbname = 'db_circuito03'
-user = 'postgres'
-password = '1234'
-
-#Connection with database ------ Conexion con base de datos 
-def get_database():
-    conn = connect(host=host, port=port, dbname=dbname,
-                   user=user, password=password)
-    return conn
+from db.db import get_database
 #generate key for encryption----- Generacion de encriptacion
 
 

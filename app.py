@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from psycopg2 import connect, extras
 from flask_cors import CORS
 
-from content import into_content, obtener_content, eliminar_contenido, obtener_contenido, actualizar_contenido
+from models.content import into_content, obtener_content, eliminar_contenido, obtener_contenido, actualizar_contenido
 
 
 
@@ -11,7 +11,7 @@ from content import into_content, obtener_content, eliminar_contenido, obtener_c
 
 app = Flask(__name__)
 
-CORS(app, resources={"*", {"origins": "http://localhost:3000"}})
+#CORS(app, resources={"*", {"origins": "http://localhost:3000"}})
 
 #Rutas contenido------------------------------------------------
 
