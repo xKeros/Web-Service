@@ -11,7 +11,7 @@ from models.content import into_content, obtener_content, eliminar_contenido, ob
 
 app = Flask(__name__)
 
-CORS(app, resources={"*", {"origins": "http://localhost:3000"}})
+#CORS(app, resources={"*", {"origins": "http://localhost:3000"}})
 
 #Rutas contenido------------------------------------------------
 
@@ -43,6 +43,9 @@ def delete_content(id):
     return result
 
 #Rutas usuarios------------------------------------------------
+
+
+#Rutas wombats------------------------------------------------
 
 if __name__ == '__main__':
     app.run(debug=True)
